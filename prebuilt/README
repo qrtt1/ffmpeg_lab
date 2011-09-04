@@ -1,0 +1,15 @@
+
+Our source of the prebuilt ffmpeg tools is to checkout out from git by tagged n0.8.2.
+We use the configuration to compile the binary files in win32:
+
+```
+./configure --prefix=/opt/ffmpeg --disable-yasm \
+--disable-doc --disable-bzlib \
+--disable-ffserver --disable-avconv \
+--disable-avdevice --disable-filters \
+--disable-encoders --enable-memalign-hack \
+--extra-cflags=-fno-common --disable-bsfs \
+--disable-muxers --enable-w32threads
+```
+
+
